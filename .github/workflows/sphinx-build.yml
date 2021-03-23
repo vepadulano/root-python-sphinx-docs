@@ -29,9 +29,6 @@ jobs:
         with:
           # The folder containing your sphinx docs.
           docs-folder: "./"
-          # The command used to build your documentation.
-          # Run before the build command, you can use this to install system level dependencies, for example with "apt-get update -y && apt-get install -y perl"
-          pre-build-command: "pip install -r ./requirements.txt"
       # Publish built docs to gh-pages branch.
       # ===============================
       - name: Commit documentation changes
