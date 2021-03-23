@@ -22,14 +22,16 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - uses: actions/checkout@v1
+      # Standard drop-in approach that should work for most people.
       - name: Sphinx Build
         # You may pin to the exact commit or the version.
         # uses: ammaraskar/sphinx-action@8b4f60114d7fd1faeba1a712269168508d4750d2
         uses: ammaraskar/sphinx-action@master
         with:
           # The folder containing your sphinx docs.
-          build-command: "sphinx-build -b html . ../build/html"
-          docs-folder: "source"          
+          build-command: "sphinx-build -b html source build/html"
+          docs-folder: "./"          
       # Publish built docs to gh-pages branch.
       # ===============================
       - name: Commit documentation changes
