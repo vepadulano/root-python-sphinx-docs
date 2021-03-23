@@ -1,0 +1,251 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>API docs &mdash; ROOT Python features documentation 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Automatic partitioning of a ROOT dataset" href="clustered_ranges.html" />
+    <link rel="prev" title="ROOT.RDF.Experimental.Distributed" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ROOT Python features documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="introduction.html">ROOT.RDF.Experimental.Distributed</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">API docs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clustered_ranges.html">Automatic partitioning of a ROOT dataset</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ROOT Python features documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="introduction.html">ROOT.RDF.Experimental.Distributed</a> &raquo;</li>
+        
+      <li>API docs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/distrdf/api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-docs">
+<h1>API docs<a class="headerlink" href="#api-docs" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ROOT.RDF.Experimental.Distributed.Spark.RDataFrame">
+<em class="property">class </em><code class="sig-prename descclassname">ROOT.RDF.Experimental.Distributed.Spark.</code><code class="sig-name descname">RDataFrame</code><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param">sparkcontext : pyspark.SparkContext</em>, <em class="sig-param">npartitions : int</em><span class="optional">]</span><span class="sig-paren">)</span> &#x2192; DistRDF.DataFrame<a class="headerlink" href="#ROOT.RDF.Experimental.Distributed.Spark.RDataFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>RDataFrame object of the <cite>Spark</cite> backend submodule. Supports the same input
+parameters as <cite>ROOT.RDataFrame</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sparkcontext</strong> (<em>pyspark.SparkContext</em>) – A SparkContext object to connect this RDataFrame to a Spark cluster.</p></li>
+<li><p><strong>npartitions</strong> (<em>int</em>) – Desidered number of partitions to split the input data. Each partition will correspond to
+a task on the distributed workers.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ROOT.RDF.Experimental.Distributed.initialize">
+<code class="sig-prename descclassname">ROOT.RDF.Experimental.Distributed.</code><code class="sig-name descname">initialize</code><span class="sig-paren">(</span><em class="sig-param">fun</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ROOT.RDF.Experimental.Distributed.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a function that will be executed as a first step on every backend before
+any other operation. This method also executes the function on the current
+user environment so changes are visible on the running session.</p>
+<p>This allows users to inject and execute custom code on the worker
+environment without being part of the RDataFrame computational graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fun</strong> – Function to be executed</p></li>
+<li><p><strong>args</strong> (<em>list</em>) – Variable length argument list used to execute the function</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – Keyword arguments used to execute the function</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="clustered_ranges.html" class="btn btn-neutral float-right" title="Automatic partitioning of a ROOT dataset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="introduction.html" class="btn btn-neutral float-left" title="ROOT.RDF.Experimental.Distributed" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Vincenzo Eduardo Padulano.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
