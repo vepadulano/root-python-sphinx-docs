@@ -1,9 +1,9 @@
 API docs
 =============
 
-.. py:class:: ROOT.RDF.Experimental.Distributed.Spark.RDataFrame([, sparkcontext : pyspark.SparkContext, npartitions : int]) -> DistRDF.DataFrame
+.. py:function:: ROOT.RDF.Experimental.Distributed.Spark.RDataFrame(*args[, sparkcontext : pyspark.SparkContext, npartitions : int]) -> DistRDF.DataFrame
 
-    RDataFrame object of the `Spark` backend submodule. Supports the same input
+    RDataFrame factory function for the `Spark` backend submodule. Supports the same input
     parameters as `ROOT.RDataFrame`
 
     :param pyspark.SparkContext sparkcontext: A SparkContext object to connect this RDataFrame to a Spark cluster.
